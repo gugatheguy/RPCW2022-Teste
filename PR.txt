@@ -7,7 +7,7 @@ Exercício 1:
 Exercício 2:
     Aquecimento:
         -Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 750?
-            - 3 processos : 750.10, 750.20 e 750.30
+            - 3 processos : 750.10 (Gestão do aluno/formando), 750.20 (Gestão formativa e curricular) e 750.30 (Avaliação de aprendizagens)
 
         -Quantas entidades estão catalogadas?
             - 647 entiddades

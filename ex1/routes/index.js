@@ -48,18 +48,24 @@ router.get('/ligacoes', function(req, res, next) {
     .then(dados =>{
         var lista = []
         dados.forEach(l =>{
-          //Cidade.consultar(l.destino)
-          //.then(cidade =>{
-          //  lista.push({id:l.id, destino:{id:l.destino, nome:cidade.nome}})
-          //})
-          //.catch(err =>{
-          //  res.status(502).jsonp({error:err})
-          //})
+        //  Cidade.consultar(l.origem)
+        //  .then(cidade =>{
+        //    Cidade.consultar(l.destino)
+        //    .then(cidade2 =>{
+        //      lista.push({id:l.id, destino:{id:l.destino, nome:cidade.nome}})
+        //    })
+        //    .catch(err =>{
+        //      res.status(502).jsonp({error:err})
+        //    })
+        //  })
+        //  .catch(err =>{
+        //    res.status(502).jsonp({error:err})
+        //})
           if (l.distância >= req.query['dist']){
             lista.push({id:l.id,origem:{id:l.origem}, destino:{id:l.destino}})
           }
         })
-        res.status(200).jsonp(lista)
+        res.status(200).jsonp(dados)
     })
     .catch(err =>{
       res.status(503).jsonp({error:err})
