@@ -1,0 +1,19 @@
+Exercício 1:
+    O JSON foi separado em 2 ficheiros diferentes(cidades.JSON e ligacoes.JSON) e através dos comandos:
+        -mongoimport -d MAPA2022 -c ligacoes --type json --file ligacoes.json --jsonArray  
+        -mongoimport -d MAPA2022 -c cidades --type json --file ligacoes.json --jsonArray 
+    foram criadas as duas colections de ligações e cidades respectivamente.
+
+Exercício 2:
+    Aquecimento:
+        -Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 750?
+            - 3 processos : 750.10, 750.20 e 750.30
+
+        -Quantas entidades estão catalogadas?
+            - 647 entiddades
+
+        -Quantos processos (classes de nível 3) se encontram na descendência de 750.20?
+            - 7 processos
+            
+        -Quantos processos (classes de nível 3) estão relacionados com 750.20.600?
+            - 24 processos

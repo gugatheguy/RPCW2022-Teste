@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  header.w3-container.mobile.w3-teal
+    a(href= '/' class="w3-button w3-round-large")
+      h1 CLAV
+  .w3-container.w3-padding-16.w3-mobile
+    if list.length > 0
+      .w3-container.w3-padding-8
+        .w3-container.w3-pale-blue.w3-center.w3-mobile
+          h2.w3-center Tabela de Termos de Índice
+        table.w3-table-all
+          tr 
+            th Termo 
+            th Classe a que pertence
+          each c in list
+            tr
+              td= c.termo
+              td
+               a(href='classe/'+c.idClasse)= c.tituloClasse+"("+c.idClasse+")"
+    else
+      .w3-container
+        p Não existem termos de índice
+    a(href= '/' class="w3-button w3-pale-blue w3-hover-gray w3-round-large") Voltar
